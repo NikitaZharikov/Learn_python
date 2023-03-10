@@ -4,3 +4,15 @@
 # *Пример:*
 # 3 2 4 -> yes
 # 3 2 1 -> no
+
+row = int(input("Ширина шоколадки "))
+column = int(input("Высота шоколадки "))
+breakoff = int(input("Сколько долек отломить "))
+square = row * column
+
+if square == breakoff:
+    print("Зачем ломать? Кушай так)")
+elif (square % (square - breakoff)) == 0:
+    print("Получилось! Приятного аппетита!")
+else:
+    print("Треснуло криво!")
