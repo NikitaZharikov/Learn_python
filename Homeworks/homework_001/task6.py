@@ -6,3 +6,13 @@
 # *Пример:*
 # 385916 -> yes
 # 123456 -> no
+
+tiketNumb = input("Введите 6-ти значный номер билета ")
+
+sum1 = int(tiketNumb[0]) + int(tiketNumb[1]) + int(tiketNumb[2])
+sum2 = int(tiketNumb[3]) + int(tiketNumb[4]) + int(tiketNumb[5])
+
+if sum1 == sum2:
+    print("Фартануло! Ваш билет счастливый!")
+else:
+    print("Не фартануло! Ваш билет не счастливый)")
