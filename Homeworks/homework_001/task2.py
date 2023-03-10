@@ -2,3 +2,11 @@
 # *Пример:*
 # 123 -> 6 (1 + 2 + 3)
 # 100 -> 1 (1 + 0 + 0)
+
+numb = int(input("Введите число:"))
+res = 0
+while (numb > 0):
+    dig = numb % 10
+    res = res + dig
+    numb = numb // 10
+print("Сумма цифр равна:", res)
