@@ -10,3 +10,21 @@
 # Ввод: 7
 # 1 2 1 8 9 6 5 4 3 4
 # Вывод: 6
+
+listRange = abs(int(input('Размер списка: ')))
+inputElemList = input("Элементы списка через пробел!: ").split()
+elemList = list(map(int, inputElemList))
+if len(elemList) != listRange or listRange == 0:
+    print('Попробуй еще разок!')
+else:
+    X = int(
+        input('Введите число, которое хотите сравнить: '))
+    min = abs(X - elemList[0])
+    index = 0
+    for i in range(1, listRange):
+        count = abs(X - elemList[i])
+        if count < min:
+            min = count
+            index = i
+    print(
+        f'Число {elemList[index]} наиболее близко по величине к числу {X}, разница составляет {abs(X - elemList[index])}')

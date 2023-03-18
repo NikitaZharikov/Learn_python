@@ -10,3 +10,17 @@
 
 # 1 2 1 2 2
 # Вывод: 2
+
+listRange = abs(int(input('Размер списка: ')))
+inputElemList = input("Элементы списка через пробел!: ").split()
+elemList = list(map(int, inputElemList))
+if len(elemList) != listRange:
+    print('Попробуй еще разок!')
+else:
+    findCountElems = int(
+        input('Число, которое хотите найти в списке: '))
+    count = 0
+    for i in range(listRange):
+        if elemList[i] == findCountElems:
+            count += 1
+    print(f'Число {findCountElems} встречается в списке {count} раз')
